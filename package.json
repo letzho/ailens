@@ -1,0 +1,18 @@
+{
+  "name": "ai-lens",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "AI Smart Lens copilot - React Vite frontend + Express backend",
+  "workspaces": ["backend", "frontend"],
+  "scripts": {
+    "dev": "concurrently -n api,web -c cyan,magenta \"npm run dev -w backend\" \"npm run dev -w frontend\"",
+    "build": "npm run build -w frontend",
+    "ingest": "npm run ingest -w backend",
+    "start": "npm run start -w backend"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.1"
+  },
+  "engines": { "node": ">=20" }
+}
